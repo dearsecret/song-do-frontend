@@ -16,7 +16,7 @@ export default function Home(){
       ? undefined
       : `${opacity} 10s ease-in-out`
     return (
-        <Stack position={"relative"} h={{sm:1000, lg:1000}} minH={"100%"} m={0} >
+        <Stack position={"relative"} h={{base:1000, lg:1000}} minH={"100%"} m={0} >
             <Grid templateColumns={{sm :"1fr" , lg :"repeat(3,1fr)"}} rowGap={5} py={7} px={{base:0 , xl: 30}}>
                 <GridItem h={{sm:150, lg:350}} >
                     <VStack bg="gray.700" as="b" fontSize={"3xl"} color={"gray.100"} justifyContent={"center"} h={"100%"}>
@@ -26,7 +26,7 @@ export default function Home(){
                 </GridItem>
                 <GridItem h={{sm:300, lg:350}} p={0} bg={"#7e6955"} colSpan={{lg: 2}}>
                     <VStack justifyContent={"center"} alignItems={"center"} h={"100%"}>
-                        <Heading animation={animation} color={"#C0B19F"} >Office for Lease</Heading>    
+                        <Heading animation={animation} color={"#C0B19F"} >Office for Lease!</Heading>    
                         <Heading animation={lastAnimation} color={"#C0B19F"} >Incheon</Heading>    
                     </VStack>
                 </GridItem>

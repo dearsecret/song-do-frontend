@@ -1,37 +1,68 @@
-import { Box, Button, Input, InputGroup, InputLeftElement, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, VStack } from "@chakra-ui/react";
-import { FcManager ,FcLock} from "react-icons/fc"
+import { Box, Button, Input, InputGroup, InputLeftElement, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, Text, useToast, VStack } from "@chakra-ui/react";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useForm } from "react-hook-form";
+import { FaLock, FaUser } from "react-icons/fa";
+import { logIn } from "../api";
 
 
 interface LogInModalProps{
     isOpen : boolean;
     onClose : () => void;
 }
+interface IForm {
+    username : string ;
+    password : string ; 
+}
 
 export default function LogInModal({isOpen, onClose}:LogInModalProps){
+    const {register,  reset, handleSubmit, formState:{errors} } = useForm<IForm>()
+    const toast =useToast()
+    const queryClient = useQueryClient()
+    const mutation = useMutation(logIn, {
+        onSuccess : () =>{
+            toast({render: () => (
+                <Box color='white' p={3} bg={"#393F43"} borderRadius={"lg"} textAlign={"center"}>
+                  이용해주셔서 감사합니다.
+                </Box>)})
+            onClose()
+            queryClient.refetchQueries(["me"])
+            reset()  
+            
+        },
+    })
+
+    const onSubmit = ({username, password}: IForm) =>{
+        mutation.mutate({username , password})
+    }
     return (
         <Modal isOpen={isOpen} onClose={onClose}>
                     <ModalOverlay />
                     <ModalContent>
                         <ModalCloseButton />
-                        <ModalHeader>
+                        <ModalHeader color={"#A29A91"}>
                             로그인
                         </ModalHeader>
-                        <ModalBody mb={15}>
+                        <ModalBody mb={15} as="form" onSubmit={handleSubmit(onSubmit)}>
                             <VStack mb={15}>
                                 <InputGroup>
                                     <InputLeftElement children={<Box color={"gray.500"}>
-                                        <FcManager />
+                                        <FaUser />
                                     </Box>}/>
-                                    <Input variant={"filled"} placeholder="아이디"/>
+                                    <Input isInvalid={Boolean(errors.username?.message)} {...register("username", {required : "아이디를 확인해주세요."})} variant={"filled"} placeholder="아이디"/>
                                 </InputGroup>
                                 <InputGroup>
                                     <InputLeftElement children={<Box color={"gray.500"}>
-                                        <FcLock />
+                                        <FaLock />
                                     </Box>}/>
-                                    <Input variant={"filled"} placeholder="비밀번호" type={"password"}/>
+                                    <Input isInvalid={Boolean(errors.password?.message)} {...register("password", {required : "패스워드를 확인해주세요."})} variant={"filled"} placeholder="비밀번호" type={"password"}/>
                                 </InputGroup>
                             </VStack>
-                            <Button w="100%" bg="black" color="white">
+                            {mutation.isError ? (
+                                <Text color="#A29A91" textAlign={"center"} fontSize="sm">
+                                아이디와 비밀번호를 확인해주세요.
+                                </Text>
+                            ) : null}
+                            <Button isLoading={mutation.isLoading} w="100%" bg="#A29A91" color="white" type="submit">
                                 로그인
                             </Button>
                         </ModalBody>

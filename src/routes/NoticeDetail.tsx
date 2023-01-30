@@ -29,9 +29,8 @@ export default function NoticeDetail (){
                         {data?.title}
                     </Heading>
                     <Stack bg={"#A49685"} borderWidth={3} borderColor={"#59493E"} m={0} minH={"70vh"} minW={"90vw"} borderRadius={"lg"} padding={5}>
-                        <Text color={"white"} as={"b"}>
-                        {data?.content}
-                        </Text>
+                        {data?.content.split("\n").map(text=><Text color={"white"} as={"b"} border={0}>{text}</Text>)}
+                        
                     </Stack>
                 </Container>
             :null}

@@ -21,11 +21,11 @@ export default function InvoiceDetail (){
             {
                 !isLoading? 
         <>
-        <Stack w={"100%"} padding={{base : 0,sm:20, md:50}} spacing={5} alignItems="flex-start" direction={{base: "column" , lg:"row" }}>
-        <VStack w={"100%"} justifyContent="center" alignItems={"space-between"} padding={{base : 0,sm:20, md:50}} spacing={5}  borderRadius="lg" bg={"#F8F6EF"}>
+        <Stack w={"100%"} px={{base : 0,md:50}} py={5} spacing={5} alignItems="flex-start" direction={{base: "column" , lg:"row" }}>
+        <VStack w={"100%"} justifyContent="center" alignItems={"space-between"} padding={{base : 10, md:50}} spacing={5}  borderRadius="lg" bg={"#F8F6EF"}>
             <Heading fontSize={24}>이용내역</Heading>
             <Heading fontSize={17}>사용자 정보</Heading>
-            <Grid templateColumns={"2fr 1fr"} margin={10} borderWidth={1} borderRadius={"lg"} padding={5} bg="white">
+            <Grid templateColumns={"1fr 1fr"} margin={{base:5 , md:10}} borderWidth={1} borderRadius={"lg"} padding={5} bg="white">
                 <Text>호실</Text>
                 <Text>{data?.contract.name}</Text>
                 <Text>면적</Text>
@@ -44,7 +44,7 @@ export default function InvoiceDetail (){
                 <Text>{data?.ratio_usage}</Text>
             </Grid>
             <Heading fontSize={17}>1. 공용전기료 이용내역</Heading>
-            <Grid templateColumns={"2fr 1fr"} margin={10} borderWidth={1} borderRadius={"lg"} padding={5} bg="white">
+            <Grid templateColumns={"1fr 1fr"} margin={{base:5 , md:10}} borderWidth={1} borderRadius={"lg"} padding={5} bg="white">
                 <Text>공용 기본전기료</Text>
                 <Text>{data?.public_share}</Text>
                 <Text>공용 사용량</Text>
@@ -53,7 +53,7 @@ export default function InvoiceDetail (){
                 <Text>{data?.public}</Text>
             </Grid>
             <Heading fontSize={17}>2. 관리비</Heading>
-            <Grid templateColumns={"2fr 1fr"} margin={10} borderWidth={1} borderRadius={"lg"} padding={5} bg="white">
+            <Grid templateColumns={"1fr 1fr"} margin={{base:5 , md:10}} borderWidth={1} borderRadius={"lg"} padding={5} bg="white">
                 <Text>일반(기본) 관리비</Text>
                 <Text>{data?.area_fee}</Text>
                 <Text>기타 비용</Text>
@@ -62,7 +62,7 @@ export default function InvoiceDetail (){
                 <Text>{data?.area_fee}</Text>
             </Grid>
             <Heading fontSize={17} >3. 전기 사용량</Heading>
-            <Grid templateColumns={"2fr 1fr"} margin={10} borderWidth={1} borderRadius={"lg"} padding={5} bg="white">
+            <Grid templateColumns={"1fr 1fr"} margin={{base:5 , md:10}} borderWidth={1} borderRadius={"lg"} padding={5} bg="white">
                 
                 <Text>① 전력사용량 요금</Text>
                 <Text>{data?.add_unit}</Text>
@@ -93,7 +93,7 @@ export default function InvoiceDetail (){
         <VStack w={"100%"} justifyContent="center" alignItems={"space-between"} padding={{base : 0,sm:20, md:50}} spacing={5} borderRadius="lg" bg={"gray.50"}>
             <Heading fontSize={24}>상세정보</Heading>
             <Heading fontSize={18}>상가 전체 전기료 </Heading>
-            <Grid templateColumns={"2fr 1fr"} margin={10} borderWidth={1} borderRadius={"lg"} padding={5}>
+            <Grid templateColumns={"1fr 1fr"} margin={{base:5 , md:10}} borderWidth={1} borderRadius={"lg"} padding={5}>
                 <Text>전체 전기료 합계</Text>
                 <Text>{data?.bill.total}원</Text>
                 <Text>관리단 전기료 합계</Text>
@@ -104,7 +104,7 @@ export default function InvoiceDetail (){
                 <Text>{data?.bill.public_usage}</Text>
             </Grid>
             <Heading fontSize={18}>전력 사용량 정보</Heading>
-            <Grid templateColumns={"2fr 1fr"} margin={10} borderWidth={1} borderRadius={"lg"} padding={5}>
+            <Grid templateColumns={"1fr 1fr"} margin={{base:5 , md:10}} borderWidth={1} borderRadius={"lg"} padding={5}>
                 <Text>원격 검침량</Text>
                 <Text>{data?.bill.usage}</Text>
                 <Text>계량기 검칭량</Text>
@@ -113,7 +113,7 @@ export default function InvoiceDetail (){
                 <Text noOfLines={1}>{data?.bill.ratio}</Text>
             </Grid>
             <Heading fontSize={18}>전기요금 정보</Heading>
-            <Grid templateColumns={"2fr 1fr"} margin={10} borderWidth={1} borderRadius={"lg"} padding={5}>
+            <Grid templateColumns={"1fr 1fr"} margin={{base:5 , md:10}} borderWidth={1} borderRadius={"lg"} padding={5}>
                 <Text>전체요금</Text>
                 <Text>{data?.bill.floor}</Text>
                 <Text>ⓐ 기본요금</Text>
@@ -122,7 +122,7 @@ export default function InvoiceDetail (){
                 <Text>{data?.bill.none_tax}</Text>
             </Grid>
             <Heading fontSize={18}>기타 통계 정보</Heading>
-            <Grid templateColumns={"2fr 1fr"} margin={10} borderWidth={1} borderRadius={"lg"} padding={5}>
+            <Grid templateColumns={"1fr 1fr"} margin={{base:5 , md:10}} borderWidth={1} borderRadius={"lg"} padding={5}>
                 <Text>전력사용량 단위요금</Text>
                 <Text>{data?.bill.unit_price}</Text>
                 <Text>임대면적</Text>

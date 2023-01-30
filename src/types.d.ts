@@ -56,10 +56,10 @@ export interface IInvoice{
     is_payed : boolean;
     bill : IBill
     __str__ : String
+    contract : IContract;
 }
 export interface IInvoiceDetail extends IInvoice{
     usage : number;
-    contract : IContract;
     bill : IBillDetail;
     public_share : number;
     area_fee : number;

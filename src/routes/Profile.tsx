@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form"
 import { IPassword } from "../types"
 import { changePW } from "../api"
 import { useState } from "react"
+import { Helmet } from "react-helmet"
 
 export default function Profile() {
     const {isLoggedIn, userLoading, user} =useUser()
@@ -37,6 +38,7 @@ export default function Profile() {
     }
     return (
         <ProtectedPage>
+            <Helmet><title>프로필 변경</title></Helmet>
             {!userLoading? 
                 (isLoggedIn? 
                     <VStack padding={20} spacing={7}>

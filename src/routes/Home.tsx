@@ -1,4 +1,5 @@
-import { Flex, Grid, GridItem, Stack, Image, keyframes, usePrefersReducedMotion, VStack, Text, Heading, HStack } from "@chakra-ui/react";
+import { Flex, Grid, GridItem, Stack, keyframes, usePrefersReducedMotion, VStack, Text, Heading, HStack } from "@chakra-ui/react";
+import { Helmet } from "react-helmet";
 import Clock from "react-live-clock"
 
 const opacity = keyframes`
@@ -17,6 +18,7 @@ export default function Home(){
       : `${opacity} 10s ease-in-out`
     return (
         <Stack position={"relative"} h={{base:1000, lg:1000}} minH={"100%"} m={0} >
+            <Helmet><title>창대그린비취</title></Helmet>
             <Grid templateColumns={{sm :"1fr" , lg :"repeat(3,1fr)"}} rowGap={5} py={7} px={{base:0 , xl: 30}}>
                 <GridItem h={{base:150, lg:350}} >
                     <VStack bg="gray.700" as="b" fontSize={"3xl"} color={"gray.100"} justifyContent={"center"} h={"100%"}>

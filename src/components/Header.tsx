@@ -4,7 +4,6 @@ import LogInModal from "./LogInModal";
 import useUser from "../lib/useUser";
 import { logOut } from "../api";
 import { useQueryClient } from "@tanstack/react-query";
-import { Helmet } from "react-helmet";
 
 
 export default function Header(){
@@ -30,7 +29,6 @@ export default function Header(){
         :null}
         </HStack>
         <Flex justifyContent={"space-between"} px={5}  borderBottomWidth={1} sx={{'@media print' : {display : "none"}}} m={0}>
-            <Helmet><title>창대그린비취</title></Helmet>
                 <Link to="/">
                 <VStack alignItems={"center"} spacing={1} color={"#7e6955"} justifyContent={"center"} m={0} p={5}>
                     <Text fontWeight={"bold"} as={"b"} fontSize={"xl"}>창대그린비취</Text>

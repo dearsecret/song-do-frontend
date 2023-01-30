@@ -1,5 +1,6 @@
 import { Box, Container, Grid, Heading, HStack, Stack, Text, VStack } from "@chakra-ui/react"
 import { useQuery } from "@tanstack/react-query"
+import { Helmet } from "react-helmet"
 import { FaCheckCircle } from "react-icons/fa"
 import { useNavigate, useParams } from "react-router-dom"
 import { getInvoiceDetail} from "../api"
@@ -18,9 +19,11 @@ export default function InvoiceDetail (){
     })
     return (
         <ProtectedPage>
+            
             {
                 !isLoading? 
         <>
+        <Helmet><title>{data?.contract.name}</title></Helmet>
         <Stack w={"100%"} px={{base : 0, md:10}} py={{base:0, md:5}} spacing={5} alignItems="flex-start" direction={{base: "column" , lg:"row" }}>
         <VStack w={"100%"} justifyContent="center" alignItems={"space-between"} px={{base :2, sm:10, md:20}} py={5} spacing={5}  borderRadius="lg" bg={"#F8F6EF"}>
             <Heading fontSize={24}>이용내역</Heading>

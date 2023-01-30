@@ -1,5 +1,6 @@
 import { Container, Heading, Stack, Text } from "@chakra-ui/react";
 import { useQuery } from "@tanstack/react-query"
+import { Helmet } from "react-helmet";
 import { useNavigate, useParams } from "react-router-dom"
 import { getNoticeDetail } from "../api";
 import ProtectedPage from "../components/ProtectedPage";
@@ -22,6 +23,7 @@ export default function NoticeDetail (){
 
     return (
         <ProtectedPage>
+            <Helmet><title>공지사항</title></Helmet>
             {!isLoading ? 
                 <Container p={10} m={0} mb={20}>
             

@@ -31,8 +31,8 @@ export default function Invoice({pk ,is_payed,bill, contract}: IInvoiceProps){
                             <FaRegTimesCircle />
                         </Box>
                     }
-                    <Text>{contract.name}</Text>
                     <Text as={"b"} noOfLines={1}>{bill.__str__}</Text>
+                    <Text noOfLines={1}>{contract.name}</Text>
                 </HStack>
                 <HStack spacing={5}>
                     <HStack display={{base: "none" , md: "inline-flex"}}>

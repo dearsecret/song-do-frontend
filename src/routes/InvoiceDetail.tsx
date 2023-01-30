@@ -22,7 +22,7 @@ export default function InvoiceDetail (){
                 !isLoading? 
         <>
         <Stack w={"100%"} px={{base : 0,md:50}} py={5} spacing={5} alignItems="flex-start" direction={{base: "column" , lg:"row" }}>
-        <VStack w={"100%"} justifyContent="center" alignItems={"space-between"} padding={{base : 10, md:50}} spacing={5}  borderRadius="lg" bg={"#F8F6EF"}>
+        <VStack w={"100%"} justifyContent="center" alignItems={"space-between"} padding={{base : 0, sm:10, md:50}} spacing={5}  borderRadius="lg" bg={"#F8F6EF"}>
             <Heading fontSize={24}>이용내역</Heading>
             <Heading fontSize={17}>사용자 정보</Heading>
             <Grid templateColumns={"1fr 1fr"} margin={{base:5 , md:10}} borderWidth={1} borderRadius={"lg"} padding={5} bg="white">

@@ -90,7 +90,7 @@ export default function InvoiceDetail (){
                         null
                     }
         </VStack>
-        <VStack w={"100%"} justifyContent="center" alignItems={"space-between"} padding={10} spacing={5} borderRadius="lg" bg={"gray.50"}>
+        <VStack w={"100%"} justifyContent="center" alignItems={"space-between"} padding={{base : 0,sm:20, md:50}} spacing={5} borderRadius="lg" bg={"gray.50"}>
             <Heading fontSize={24}>상세정보</Heading>
             <Heading fontSize={18}>상가 전체 전기료 </Heading>
             <Grid templateColumns={"2fr 1fr"} margin={10} borderWidth={1} borderRadius={"lg"} padding={5}>
@@ -147,7 +147,7 @@ export default function InvoiceDetail (){
         
         
         </Stack>
-        <VStack alignItems={"flex-start"} mt={2} mb={20} mx={10} borderWidth={1} borderRadius={"xl"} p={5} bg={"gray.50"}>
+        <VStack alignItems={"flex-start"} mt={2} mb={20} padding={{base : 0,sm:20, md:50}} borderWidth={1} borderRadius={"xl"} bg={"gray.50"}>
             
             {data?.bill.memos ? 
                 <>

@@ -21,8 +21,8 @@ export default function InvoiceDetail (){
             {
                 !isLoading? 
         <>
-        <Stack w={"100%"} padding={12} spacing={5} alignItems="flex-start" direction={{base: "column" , lg:"row" }}>
-        <VStack w={"100%"} justifyContent="center" alignItems={"space-between"} padding={10} spacing={5}  borderRadius="lg" bg={"#F8F6EF"}>
+        <Stack w={"100%"} padding={{base : 0,sm:20, md:50}} spacing={5} alignItems="flex-start" direction={{base: "column" , lg:"row" }}>
+        <VStack w={"100%"} justifyContent="center" alignItems={"space-between"} padding={{base : 0,sm:20, md:50}} spacing={5}  borderRadius="lg" bg={"#F8F6EF"}>
             <Heading fontSize={24}>이용내역</Heading>
             <Heading fontSize={17}>사용자 정보</Heading>
             <Grid templateColumns={"2fr 1fr"} margin={10} borderWidth={1} borderRadius={"lg"} padding={5} bg="white">

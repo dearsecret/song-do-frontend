@@ -147,7 +147,7 @@ export default function InvoiceDetail (){
         
         
         </Stack>
-        <VStack alignItems={"flex-start"} mt={2} mb={20} padding={{base : 0,sm:20, md:50}} borderWidth={1} borderRadius={"xl"} bg={"gray.50"}>
+        <VStack alignItems={"flex-start"} mt={2} mb={20} padding={{base : 5,sm:20, md:50}} borderWidth={1} borderRadius={"xl"} bg={"gray.50"}>
             
             {data?.bill.memos ? 
                 <>

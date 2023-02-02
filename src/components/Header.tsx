@@ -23,7 +23,9 @@ export default function Header(){
         {!userLoading? 
             (isLoggedIn? 
             <Link to="/invoices">
-                <Button bg={"#A29A91"} color={"white"} variant={"solid"} size={"sm"}>이용내역</Button>
+                
+                <Button  bg={"#A29A91"} color={"white"} variant={"solid"} size={"sm"}>이용내역</Button>
+                
             </Link>
             :null)
         :null}

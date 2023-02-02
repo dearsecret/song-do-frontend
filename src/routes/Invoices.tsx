@@ -13,7 +13,7 @@ import { IInvoice, INotice } from "../types"
 export default function Invoices (){
     const [pageNum, setPageNum] = useState(1)
     const {data:NoticeData, isLoading:NoticeLoading} = useQuery<INotice[]>([`notices`], getNotices)
-    const {data:InvoiceData ,isLoading:InvoiceLoading} = useQuery<IInvoice[]>([`invoices`,pageNum], getInvoices, {
+    const {data:InvoiceData ,isLoading:InvoiceLoading} = useQuery<IInvoice[]>([`invoices`], getInvoices, {
         retry: false
     })
 

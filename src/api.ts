@@ -39,9 +39,10 @@ export const getBill = ({queryKey} : QueryFunctionContext) => {
     const [_, billPk] = queryKey
     return instance.get(`invoices/bills/${billPk}`).then(res=>res.data)
 }
-export const getInvoices = ({queryKey}:QueryFunctionContext) => {
-    const [_, pageNum] = queryKey
-    return instance.get(`invoices/pages?page=${pageNum}`).then(res=>res.data)
+export const getInvoices = () => {
+    // const [_, pageNum] = queryKey
+    // return instance.get(`invoices/pages?page=${pageNum}`).then(res=>res.data)
+    return instance.get(`invoices/pages`).then(res=>res.data)
 }
 export const getInvoiceDetail = ({queryKey}: QueryFunctionContext) => {
     const [_, invocePk] = queryKey

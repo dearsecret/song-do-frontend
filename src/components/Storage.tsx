@@ -1,10 +1,8 @@
 import { Box, HStack, Image, Stack, Text, VStack } from "@chakra-ui/react";
-import ProtectedPage from "./ProtectedPage";
 
 
 export default function Storage(){
     return (
-        <ProtectedPage>
         <Box mx={{base: 5 , sm : 10, md:20}} my={10} color="blackAlpha.700">
             <HStack fontSize={24} as="b" m={0}>
                 <Text>Warehouse 운영</Text>
@@ -42,6 +40,5 @@ export default function Storage(){
                 </VStack>
             </Stack>
         </Box>
-        </ProtectedPage>
     )
 }

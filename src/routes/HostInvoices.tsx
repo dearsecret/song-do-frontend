@@ -1,6 +1,5 @@
 import { Container, Grid, GridItem, InputGroup, InputLeftAddon, HStack, Select, Button, Text, Flex } from "@chakra-ui/react"
 import { useQuery } from "@tanstack/react-query"
-import { Helmet } from "react-helmet"
 import { useForm } from "react-hook-form"
 import { getBilling, getCustInfo } from "../api"
 import StaffOnlyPage from "../components/StaffOnlyPage"
@@ -29,7 +28,6 @@ export default function HostInvoices(){
             {menuLoading?
             null : 
                 <Container py={30} px={{base : 30, md:50}} minW={"100vw"} mb={"10vh"}>
-                    <Helmet><title>창대그린비취 : 요금조회</title></Helmet>
                     <HStack my={2}>
                         <InputGroup >
                             <InputLeftAddon>고객번호</InputLeftAddon>                            

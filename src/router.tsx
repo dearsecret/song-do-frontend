@@ -7,6 +7,8 @@ import Invoices from "./routes/Invoices";
 import InvoiceDetail from "./routes/InvoiceDetail";
 import NoticeDetail from "./routes/NoticeDetail";
 import HostInvoices from "./routes/HostInvoices";
+import Deposit from "./components/Deposit";
+import Storage from "./components/Storage";
 
 
 const router = createBrowserRouter([
@@ -38,6 +40,14 @@ const router = createBrowserRouter([
         {
           path : "notices/:noticePk",
           element : <NoticeDetail />
+        },
+        {
+          path : "deposit",
+          element : <Deposit />
+        },
+        {
+          path : "storage",
+          element : <Storage />
         },
       ]
     },

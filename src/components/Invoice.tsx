@@ -1,6 +1,6 @@
 import { Box, Button, HStack, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { FaCheckCircle, FaFileContract, FaRegTimesCircle } from "react-icons/fa"
+import { FaCheckCircle, FaRegTimesCircle } from "react-icons/fa"
 import { IContract } from "../types";
 
 interface IInvoiceProps {
@@ -21,7 +21,7 @@ export default function Invoice({pk ,is_payed,bill, contract}: IInvoiceProps){
 
     return (
         <Link to={`/invoice/${pk}`}>
-            <HStack key={pk} justifyContent={"space-between"} alignItems={"center"} borderWidth={1} p={5} borderRadius={"xl"} m={1} bg="white" fontSize={"sm"}>
+            <HStack key={pk} justifyContent={"space-between"} alignItems={"center"} borderBottomWidth={1} p={5}  bg="white" fontSize={"sm"}>
                 <HStack spacing={5}>
                     {is_payed? 
                         <Box color={"green.500"}>

@@ -33,7 +33,7 @@ export default function Header(){
         <Flex justifyContent={"space-between"} px={5}  borderBottomWidth={1} sx={{'@media print' : {display : "none"}}} m={0}>
                 <Link to="/">
                 <VStack alignItems={"center"} spacing={1} color={"#7e6955"} justifyContent={"center"} m={0} p={5}>
-                    <Text fontWeight={"bold"} as={"b"} fontSize={"xl"}>창대그린비취</Text>
+                    <Text fontWeight={"bold"} as={"b"} fontSize={"xl"}>송도비취타운</Text>
                     <Text fontWeight={"bold"} as={"b"} fontSize={"sm"}>상가&사무실</Text>
                 </VStack>
                 </Link>

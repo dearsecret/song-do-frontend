@@ -17,11 +17,13 @@ export default function Profile() {
     const client = useQueryClient()
 
     const [toggle,  setToggle] = useState(false)
+    const {register, handleSubmit, reset} = useForm<IPassword>()
+    
     const onClick =()=>{
         setToggle(!toggle)
+        reset()
     }
-
-    const {register, handleSubmit} = useForm<IPassword>()
+    
     const mutation = useMutation(changePW , {
         onSuccess : () =>{
             client.refetchQueries([`me`])

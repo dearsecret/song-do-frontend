@@ -1,4 +1,4 @@
-import {  Box, HStack, Stack, Text, VStack } from "@chakra-ui/react";
+import { HStack, Stack, Text, VStack } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 interface INoticeProps{

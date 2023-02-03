@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, HStack, Image, Stack, Text, VStack } from "@chakra-ui/react";
+import { Box, HStack, Image, Stack, Text, VStack } from "@chakra-ui/react";
 import ProtectedPage from "./ProtectedPage";
 
 

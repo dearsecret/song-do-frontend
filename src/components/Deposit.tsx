@@ -1,11 +1,13 @@
 import { Box, Flex, HStack, Image, Slider, SliderFilledTrack, SliderMark, SliderThumb, SliderTrack, Stack, Text, Tooltip, VStack } from "@chakra-ui/react"
 import { useState } from "react"
 import { FaPlus, FaArrowsAltH } from "react-icons/fa"
+import ProtectedPage from "./ProtectedPage"
 
 export default function Deposit(){
     const [sliderValue, setSliderValue] = useState(0)
     const [showTooltip, setShowTooltip] = useState(false)
     return (
+        <ProtectedPage>
         <Box mx={{base: 5 , sm : 10, md:20}} my={10} color="blackAlpha.700">
             <HStack fontSize={24} as="b" m={0}>
                 <Text>보증금</Text>
@@ -79,5 +81,6 @@ export default function Deposit(){
                 </Flex>
             </Stack>
         </Box>
+        </ProtectedPage>
     )
 }

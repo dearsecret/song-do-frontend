@@ -35,7 +35,7 @@ export default function Home(){
                 </GridItem>
                 <GridItem h={{base:200, lg:350}} p={0} colSpan={{lg: 2}} bg={"#A49685"}>
                     <VStack justifyContent={"center"} alignItems={"center"} h={"100%"}>
-                        <Text>갤러리</Text>
+                        <Text></Text>
                     </VStack>
                 </GridItem>
                 <GridItem h={{base:300, lg:350}}  bg="#8C8D8E" fontSize={"sm"} as="b" color={"gray.100"}>

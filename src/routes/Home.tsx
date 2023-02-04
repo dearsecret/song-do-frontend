@@ -68,7 +68,7 @@ export default function Home(){
                 <Grid templateColumns={{sm :"1fr", md:"1fr 1fr"}} w={"100vw"} p={5} columnGap={{sm : 20}} py={5} px={{sm:5 , md:20}} bg={"#393F43"} textAlign={"end"} color={"white"}>
                     <HStack justifyContent={"space-between"}>
                         <Text>상호명</Text>
-                        <Text noOfLines={1}>송도비취타운 사무싩</Text>
+                        <Text noOfLines={1}>송도비취타운 사무실</Text>
                     </HStack>
                     <HStack justifyContent={"space-between"}>
                         <Text>주소</Text>

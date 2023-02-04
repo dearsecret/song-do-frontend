@@ -23,18 +23,15 @@ export default function Header(){
         {!userLoading? 
             (isLoggedIn? 
             <Link to="/invoices">
-                
                 <Button  bg={"#A29A91"} color={"white"} variant={"solid"} size={"sm"}>이용내역</Button>
-                
             </Link>
             :null)
         :null}
         </HStack>
-        <Flex justifyContent={"space-between"} px={5}  borderBottomWidth={1} sx={{'@media print' : {display : "none"}}} m={0}>
+        <Flex justifyContent={"space-between"} px={4} py={1}  borderBottomWidth={1} sx={{'@media print' : {display : "none"}}} m={0}>
                 <Link to="/">
                 <VStack alignItems={"center"} spacing={1} color={"#7e6955"} justifyContent={"center"} m={0} p={5}>
                     <Text fontWeight={"bold"} as={"b"} fontSize={"xl"}>송도비취타운</Text>
-                    <Text fontWeight={"bold"} as={"b"} fontSize={"sm"}>상가&사무실</Text>
                 </VStack>
                 </Link>
             <HStack>

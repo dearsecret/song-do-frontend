@@ -19,7 +19,7 @@ export default function Home(){
       : `${opacity} 10s ease-in-out`
     return (
         <Stack position={"relative"} h={{base:1200, lg:1000}} minH={"100%"} m={0} >
-            <Helmet><title>송도비취타운 사무실</title></Helmet>
+            <Helmet><title>송도비취타운</title></Helmet>
             <Grid templateColumns={{sm :"1fr" , lg :"repeat(3,1fr)"}} rowGap={6} py={7} px={{base:0 , xl: 30}}>
                 <GridItem h={{base:150, lg:350}} >
                     <VStack bg="gray.700" as="b" fontSize={"3xl"} color={"gray.100"}h={"100%"}  justifyContent={"center"} >

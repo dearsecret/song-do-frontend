@@ -14,7 +14,7 @@ export default function Deposit(){
             </HStack>
             <Stack alignItems={"center"}>
                 <Box borderRadius={"xl"} minH={"100"} w="200" overflow={"hidden"} my={5} >
-                    <Image src="/money.jpg" objectFit={"cover"} />
+                    <Image src="https://imagedelivery.net/J9h5bfi5i6mCYIcaebsRcw/9b753193-aab6-479c-bc3b-f0a9d3a31000/public" objectFit={"cover"} />
                 </Box>
             </Stack>
             <Slider mt={10}

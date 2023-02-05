@@ -9,7 +9,7 @@ export default function Storage(){
             </HStack>
             <Stack alignItems={"center"}>
                 <Box borderRadius={"xl"} minH={"100"} w="200" overflow={"hidden"} my={5} >
-                    <Image src="/warehouse.jpg" objectFit={"cover"} />
+                    <Image src="https://imagedelivery.net/J9h5bfi5i6mCYIcaebsRcw/fb92e7ce-ea49-4072-a8d7-78b408b1f500/public" objectFit={"cover"} />
                 </Box>
             </Stack>
             <Stack spacing={0} borderColor={"#8C8D8E"} borderRadius={"md"} minH={300} mt={20} p={3} bg={"#F8F6EF"}>

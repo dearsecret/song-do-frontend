@@ -7,14 +7,16 @@ export default function Deposit(){
     const [showTooltip, setShowTooltip] = useState(false)
     return (
         <Box mx={{base: 5 , sm : 10, md:20}} my={10} color="blackAlpha.700">
-            <HStack fontSize={24} as="b" m={0}>
-                <Text>보증금</Text>
-                <FaArrowsAltH size={13}/>
-                <Text>월납입금</Text>
+            <HStack m={0} bg={"#F8F6EF"} borderTopWidth={1} borderColor={"#7E6955"}  >
+                <Stack direction={"row"} m={5} spacing={5} color={"blackAlpha.600"} fontSize={"lg"} as="b" alignItems={"center"}>
+                    <Text>보증금</Text>
+                    <FaArrowsAltH size={13}/>
+                    <Text>월납입금</Text>
+                </Stack >
             </HStack>
             <Stack alignItems={"center"}>
-                <Box borderRadius={"xl"} minH={"100"} w="200" overflow={"hidden"} my={5} >
-                    <Image src="https://imagedelivery.net/J9h5bfi5i6mCYIcaebsRcw/9b753193-aab6-479c-bc3b-f0a9d3a31000/public" objectFit={"cover"} />
+                <Box borderRadius={"xl"} minH={"100%"}  overflow={"hidden"} my={5} >
+                    <Image src="https://imagedelivery.net/J9h5bfi5i6mCYIcaebsRcw/9b753193-aab6-479c-bc3b-f0a9d3a31000/public" objectFit={"cover"}/>
                 </Box>
             </Stack>
             <Slider mt={10}

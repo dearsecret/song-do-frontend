@@ -4,8 +4,10 @@ import { Box, HStack, Image, Stack, Text, VStack } from "@chakra-ui/react";
 export default function Storage(){
     return (
         <Box mx={{base: 5 , sm : 10, md:20}} my={10} color="blackAlpha.700">
-            <HStack fontSize={24} as="b" m={0}>
-                <Text>Warehouse 운영</Text>
+            <HStack m={0} bg={"#F8F6EF"} borderTopWidth={1} borderColor={"#7E6955"}  >
+                <Stack direction={"row"} m={5} spacing={5} color={"blackAlpha.600"} fontSize={"lg"} as="b" alignItems={"center"}>
+                    <Text>웨어하우스</Text>
+                </Stack >
             </HStack>
             <Stack alignItems={"center"}>
                 <Box borderRadius={"xl"} minH={"100"} w="200" overflow={"hidden"} my={5} >

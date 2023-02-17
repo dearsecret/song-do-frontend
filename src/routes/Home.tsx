@@ -101,7 +101,7 @@ export default function Home(){
                                     </Text>
                                 </Box>
                             </a>
-                            <a href="tel:+82 010-4476-8444'">
+                            <a href="tel:+82 010-4476-8444">
                                 <Box bg="#69696B" py={3} borderRadius={"sm"} w="100%" display={{base : "-moz-initial", sm : "none"}}>
                                     <Text>
                                         Contact us with CellPhone

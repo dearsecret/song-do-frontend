@@ -104,3 +104,19 @@ export interface ElecInfo {
     jn_pwrfact : string;
     ji_pwrfact : string;
 }
+
+export interface Rooms{
+    pk : number;
+    category : string;
+    title : string;
+    thumb : string;
+}
+
+export interface PromotionDetail extends Rooms {
+    pk : number ; 
+    category : string ;
+    title : string ;
+    descrpiton : string ;
+    detail : string ;
+    created_at : string;
+}

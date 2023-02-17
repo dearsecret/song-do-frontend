@@ -62,3 +62,9 @@ export const getBilling =({queryKey}:QueryFunctionContext)=> {
     const [_,custNum, billYm]= queryKey
     return instance.get(`informations/check?custNo=${custNum}&bill_ym=${billYm}`).then(res=>res.data)
 }
+
+export const getPromotions = ()=> instance.get(`promotions/`).then(res => res.data)
+export const getPromotionDetail = ({queryKey}:QueryFunctionContext) => {
+    const [_, promotionPk] = queryKey
+    return instance.get(`promotions/${promotionPk}`).then(res=>res.data)
+}

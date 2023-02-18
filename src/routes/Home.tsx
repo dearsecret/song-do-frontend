@@ -82,13 +82,15 @@ export default function Home(){
                 
                 <GridItem   bg="#8C8D8E" fontSize={"sm"} as="b" color={"gray.100"}>
                     <VStack  p={0} m={0}>
-                        <HStack mt={5} justifyContent={"space-between"} w={"80%"}>
-                            <Text as="b" fontStyle={"oblique"} fontSize={"lg"}>Information</Text>
-                            
+                        <Stack p={2} m={0} opacity={"85%"} w={{base: "80%", md:"100%"}} bg={"blackAlpha.600"} mb={3}>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12675.13155301673!2d126.649889!3d37.4186063!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5fae2ef0f4c0965!2z7Iah64-E67mE7Leo7YOA7Jq0IOyCrOustOyLpA!5e0!3m2!1sko!2skr!4v1676710025590!5m2!1sko!2skr"  loading="lazy"></iframe>
+                        </Stack>
+                        <HStack justifyContent={"space-between"} w={"80%"}>
+                            <Text fontStyle={"oblique"} fontSize={"lg"}>Information</Text>
                         </HStack>
-                        <Stack pt={{base:0}} spacing={{base:3, md:5}} w={"80%"} textAlign={"center"} pb={10}>
+                        <Stack pt={{base:0}} spacing={3} w={"80%"} textAlign={"center"} pb={10}>
                             <Link to="/deposit">
-                                <Box bg="#69696B" py={3} borderRadius={"sm"} mt={5} w="100%">
+                                <Box bg="#69696B" py={3} borderRadius={"sm"} mt={3} w="100%">
                                     <Text>
                                         보증금 및 월납입금
                                     </Text>
@@ -108,14 +110,11 @@ export default function Home(){
                                     </Text>
                                 </Box>
                             </a>
-            
                         </Stack>
                         
                     </VStack>
                 </GridItem>
             </Grid>
-            
-            
         </Stack>
     )
 }

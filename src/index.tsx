@@ -6,7 +6,6 @@ import router from './router';
 
 const client = new QueryClient();
 
-
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

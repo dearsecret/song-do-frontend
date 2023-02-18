@@ -68,7 +68,7 @@ export default function Home(){
                      : data?.map(room=> 
                     <GridItem key={room.pk} p={5} bg={"#A49685"} >
                         <Link to={`/promotion/${room.pk}`}>
-                            <Flex  borderRadius={"sm"} overflow={"hidden"} justifyContent={"center"}>
+                            <Flex  borderRadius={"sm"} overflow={"hidden"} justifyContent={"center"} mx={{base:10 , md: 0}}>
                                 <Image src={room.thumb} objectFit={"cover"} w={"100%"} h={60}  />
                             </Flex>
                             <Flex px={5} py={4} color={"whiteAlpha.800"} flexDirection={"column"}>
@@ -90,7 +90,7 @@ export default function Home(){
                             <Link to="/deposit">
                                 <Box bg="#69696B" py={3} borderRadius={"sm"} mt={5} w="100%">
                                     <Text>
-                                        보증금 및 월납입금 조율
+                                        보증금 및 월납입금
                                     </Text>
                                 </Box>
                             </Link>

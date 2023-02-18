@@ -1,7 +1,7 @@
 import { Box, Button, Input, InputGroup, InputLeftElement, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, Text, useToast, VStack } from "@chakra-ui/react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
-import { FaLock, FaUser } from "react-icons/fa";
+import { FaEnvelope, FaLock } from "react-icons/fa";
 import { logIn } from "../api";
 
 
@@ -46,9 +46,9 @@ export default function LogInModal({isOpen, onClose}:LogInModalProps){
                             <VStack mb={15}>
                                 <InputGroup>
                                     <InputLeftElement children={<Box color={"gray.500"}>
-                                        <FaUser />
+                                        <FaEnvelope />
                                     </Box>}/>
-                                    <Input isInvalid={Boolean(errors.username?.message)} {...register("username", {required : "아이디를 확인해주세요."})} variant={"filled"} placeholder="아이디"/>
+                                    <Input isInvalid={Boolean(errors.username?.message)} {...register("username", {required : "이메일을 확인해주세요."})} variant={"filled"} placeholder="이메일"/>
                                 </InputGroup>
                                 <InputGroup>
                                     <InputLeftElement children={<Box color={"gray.500"}>
@@ -59,7 +59,7 @@ export default function LogInModal({isOpen, onClose}:LogInModalProps){
                             </VStack>
                             {mutation.isError ? (
                                 <Text color="#A29A91" textAlign={"center"} fontSize="sm">
-                                아이디와 비밀번호를 확인해주세요.
+                                이메일 또는 비밀번호를 확인해주세요.
                                 </Text>
                             ) : null}
                             <Button isLoading={mutation.isLoading} w="100%" bg="#A29A91" color="white" type="submit">

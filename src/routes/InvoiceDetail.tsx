@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Heading, HStack, Stack, Text, VStack } from "@chakra-ui/react"
+import { Box, Container, Grid, Heading, HStack, Skeleton, Stack, Text, VStack } from "@chakra-ui/react"
 import { useQuery } from "@tanstack/react-query"
 import { Helmet } from "react-helmet"
 import { FaCheckCircle } from "react-icons/fa"
@@ -173,7 +173,7 @@ export default function InvoiceDetail (){
         </VStack>
         </>
 
-                :null
+                :  <Skeleton w={"100%"} px={{base : 0, md:10}} py={{base:0, md:5}} h={"100vh"} />
             }
         </ProtectedPage>
         

@@ -25,11 +25,11 @@ export default function Promotion(){
                     <Text fontSize={"xl"} as="b">{data?.category}</Text>
                     <Text as="b">{data?.created_at.slice(0,10)}</Text>
                 </HStack> 
-                <VStack justifyContent={"space-between"} p={1} alignItems={"end"} m={2} minH={"300px"}>
+                <VStack justifyContent={"start"} p={1} alignItems={"end"} m={2} minH={"300px"} spacing={0}>
                     {data?.description? data?.description.split("\n").map(text=><Text color={"blackAlpha.600"}>{text}</Text>): null}
                 </VStack>
                 <Divider opacity={"30%"} />
-                <VStack justifyContent={"space-between"}  p={1} alignItems={"end"} m={5} minH={"200px"}>
+                <VStack justifyContent={"start"}  p={1} alignItems={"end"} m={5} minH={"200px"} spacing={0}>
                     {data?.detail? data?.detail.split("\n").map(text=><Text fontSize={"sm"} color={"blackAlpha.600"}>{text}</Text>): null}
                 </VStack>
             </Stack>

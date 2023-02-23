@@ -73,7 +73,7 @@ export default function Home(){
                             </Flex>
                             <Flex px={5} py={4} color={"whiteAlpha.800"} flexDirection={"column"}>
                                 <Text as={"b"} noOfLines={1}>{room.title}</Text>
-                                <Text noOfLines={1}>{room.category}</Text>
+                                <Text textAlign={"end"} noOfLines={1}>{room.category}</Text>
                             </Flex>
                         </Link>
                     </GridItem>

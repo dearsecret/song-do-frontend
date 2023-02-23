@@ -116,7 +116,7 @@ export interface PromotionDetail extends Rooms {
     pk : number ; 
     category : string ;
     title : string ;
-    descrpiton : string ;
+    description : string ;
     detail : string ;
     created_at : string;
 }

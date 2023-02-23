@@ -1,4 +1,4 @@
-import { Box, HStack, Image, Stack, Text, VStack } from "@chakra-ui/react";
+import { Box, Divider, HStack, Image, Stack, Text, VStack } from "@chakra-ui/react";
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
 import { getPromotionDetail } from "../api";
@@ -25,13 +25,13 @@ export default function Promotion(){
                     <Text fontSize={"xl"} as="b">{data?.category}</Text>
                     <Text as="b">{data?.created_at.slice(0,10)}</Text>
                 </HStack> 
-                <HStack justifyContent={"space-between"} p={1} alignItems={"end"} m={2}>
-                    {data?.descrpiton? data?.descrpiton.split("\n").map(text=><Text color={"blackAlpha.600"}>{text}</Text>): null}
-                </HStack>
-
-                <HStack justifyContent={"space-between"}  p={1} alignItems={"end"} m={5}>
-                    {data?.descrpiton? data?.descrpiton.split("\n").map(text=><Text color={"blackAlpha.600"}>{text}</Text>): null}
-                </HStack>
+                <VStack justifyContent={"space-between"} p={1} alignItems={"end"} m={2}>
+                    {data?.description? data?.description.split("\n").map(text=><Text color={"blackAlpha.600"}>{text}</Text>): null}
+                </VStack>
+                <Divider />
+                <VStack justifyContent={"space-between"}  p={1} alignItems={"end"} m={5}>
+                    {data?.detail? data?.detail.split("\n").map(text=><Text fontSize={"sm"} color={"blackAlpha.600"}>{text}</Text>): null}
+                </VStack>
             </Stack>
         </Box>
     )

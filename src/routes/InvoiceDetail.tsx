@@ -150,9 +150,9 @@ export default function InvoiceDetail (){
         
         
         </Stack>
+        {data?.bill.memos ? 
         <VStack alignItems={"flex-start"} mt={2} mb={20} padding={{base : 5,sm:20, md:50}} borderWidth={1} borderRadius={"xl"} bg={"gray.50"}>
             
-            {data?.bill.memos ? 
                 <>
                 
                 <Text as="b">알림</Text>
@@ -168,9 +168,9 @@ export default function InvoiceDetail (){
                         </Stack>
                     </Stack>)}
                 </> 
-            : null }
 
         </VStack>
+            : null }
         </>
 
                 :  <Skeleton w={"100%"} px={{base : 0, md:10}} py={{base:0, md:5}} h={"100vh"} />

@@ -24,6 +24,7 @@ export default function Home(){
         retry: false
     })
 
+
     return (
         <Stack >
             <Helmet><title>송도비취타운</title></Helmet>

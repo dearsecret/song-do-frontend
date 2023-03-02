@@ -24,7 +24,7 @@ interface WeatherProps{
 
 
 export default function Weather(){
-    const {data , isLoading} = useQuery<WeatherProps[]>([`weather`], getWeathers , {
+    const {data, isLoading, isError} = useQuery<WeatherProps[]>([`weather`], getWeathers , {
         retry : false
     })
     let currTemp
@@ -50,6 +50,9 @@ export default function Weather(){
     }
     return (
         <>
+        {isError? 
+            null:
+            <>
             {isLoading? null:
                 <HStack fontSize={30}  alignItems={"center"} spacing={3}>
                     <Flex flexDirection={"row"} color={"white"} >
@@ -66,7 +69,8 @@ export default function Weather(){
                     }
                 </HStack>
             }
-            
+            </>
+        }   
         </>
     )
 }

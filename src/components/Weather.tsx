@@ -24,29 +24,28 @@ interface WeatherProps{
 
 
 export default function Weather(){
-    const {data, isLoading, isError} = useQuery<WeatherProps[]>([`weather`], getWeathers , {
+    const {data, isLoading, isError} = useQuery<WeatherProps>([`weather`], getWeathers , {
         retry : false
     })
     let currTemp
     let fcstIcon 
     if (data != null){
-        const first = data[0]   
-        if (first.RN1 !== "강수없음"){
-            if (first.PTY === "7" || first.PTY ==="3"){
+        if (data.RN1 !== "강수없음"){
+            if (data.PTY === "7" || data.PTY ==="3"){
                 // 눈
                 fcstIcon =BsSnow2
             } else {
                 // 비
                 fcstIcon = WiDayShowers
             }
-        } else if (first.SKY !== "1"){
+        } else if (data.SKY !== "1"){
             // 구름
             fcstIcon = WiDayCloudy
         } else {
             // 맑음
             fcstIcon = WiDaySunny
         }
-        currTemp = first.T1H
+        currTemp = data.T1H
     }
     return (
         <>

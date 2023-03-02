@@ -68,3 +68,5 @@ export const getPromotionDetail = ({queryKey}:QueryFunctionContext) => {
     const [_, promotionPk] = queryKey
     return instance.get(`promotions/${promotionPk}`).then(res=>res.data)
 }
+
+export const getWeathers = () => instance.get(`informations/weather`).then(res=>res.data)

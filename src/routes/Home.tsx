@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import Clock from "react-live-clock"
 import { Link } from "react-router-dom";
 import { getPromotions } from "../api";
+import Weather from "../components/Weather";
 import { Rooms } from "../types";
 
 const opacity = keyframes`
@@ -29,20 +30,25 @@ export default function Home(){
         <Stack >
             <Helmet><title>송도비취타운</title></Helmet>
             <Grid templateColumns={{sm :"1fr" , lg :"repeat(3,1fr)"}} pt={5} px={{base:0 , xl: 30}}>
-                <GridItem h={{base:150, lg:350}} >
-                    <VStack bg="gray.700" as="b" fontSize={"3xl"} color={"gray.100"}h={"100%"}  justifyContent={"center"} >
-                        <Clock format={"YYYY년 MM월 DD일"} ticking={true} timezone={"Asia/Seoul"}/>
-                        <Clock format={"HH:mm:ss"} ticking={true} timezone={"Asia/Seoul"}/>
-                    </VStack>
-                </GridItem>
-                <GridItem h={{base:250, lg:350}} p={0} bg={"#7e6955"} colSpan={{lg: 2}}>
-                    <VStack justifyContent={"center"} alignItems={"center"} h={"100%"}>
-                        <Heading animation={animation} color={"#C0B19F"} >Office for Lease!</Heading>    
-                        <Heading animation={lastAnimation} color={"#C0B19F"} >Incheon</Heading>    
+                <GridItem h={{base:250, md:350}} p={0} bg={"#7e6955"} colSpan={{lg: 3}}>
+                    <VStack justifyContent={"space-between"} alignItems={"center"} h={"100%"} pt={20}>
+                        <VStack>
+                            <Heading animation={animation} color={"#C0B19F"} >Office for Lease!</Heading>    
+                            <Heading animation={lastAnimation} color={"#C0B19F"} >Incheon</Heading>    
+                        </VStack>
+                        <HStack bg ="rgba(0,0,0,0.65)"  p={0} m={0} alignItems={"center"} justifyContent="space-between" fontSize={"4xl"} pb={2} px={5} w={"100%"} fontFamily={"heading"}>
+                            <HStack color={"white"} spacing={3}>
+                                <VStack spacing={0} fontSize={"md"}>
+                                    <Clock format={"YYYY"} ticking={true} timezone={"Asia/Seoul"}/>
+                                    <Clock format={"MM/DD"} ticking={true} timezone={"Asia/Seoul"}/>
+                                </VStack>
+                                <Clock format={"HH:mm:ss"} ticking={true} timezone={"Asia/Seoul"}/>
+                            </HStack>
+                            <Weather />
+                        </HStack>
                     </VStack>
                 </GridItem>
             </Grid>
-
             <Grid templateColumns={{base :"1fr" , md :"repeat(3,1fr)"}} px={{base:0 , xl: 30}} >
                 
                 {isLoading ? 

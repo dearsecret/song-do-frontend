@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query"
 import { getWeathers } from "../api"
 import {WiDayCloudy, WiDayShowers, WiDaySunny, WiDegrees} from "react-icons/wi"
 import {BsSnow2} from "react-icons/bs"
-import { Box, Flex, HStack, Icon, Stack, Text } from "@chakra-ui/react";
+import { Flex, HStack, Icon, Text } from "@chakra-ui/react";
 
 interface WeatherProps{
     LGT : string;
@@ -29,7 +29,7 @@ export default function Weather(){
     })
     let currTemp
     let fcstIcon 
-    if (data){
+    if (data != null){
         const first = data[0]   
         if (first.RN1 !== "강수없음"){
             if (first.PTY === "7" || first.PTY ==="3"){
@@ -59,7 +59,11 @@ export default function Weather(){
                             <Text>c</Text>
                         </Flex>
                     </Flex>
-                    <Icon as={fcstIcon} color={"white"} fontSize={45}/>
+                    {
+                        fcstIcon ? 
+                        <Icon as={fcstIcon} color={"white"} fontSize={45}/>:
+                        null
+                    }
                 </HStack>
             }
             

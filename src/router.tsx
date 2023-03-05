@@ -9,6 +9,7 @@ import NoticeDetail from "./routes/NoticeDetail";
 import HostInvoices from "./routes/HostInvoices";
 import Deposit from "./components/Deposit";
 import Promotion from "./routes/PromotionDetail";
+import Map from "./routes/Map";
 
 
 const router = createBrowserRouter([
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
         {
           path : "promotion/:promotionPk",
           element : <Promotion />
+        },
+        {
+          path : "map",
+          element : <Map />
         },
       ]
     },

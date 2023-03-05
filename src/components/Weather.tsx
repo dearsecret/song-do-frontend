@@ -53,7 +53,7 @@ export default function Weather(){
             null:
             <>
             {isLoading? null:
-                <HStack fontSize={30}  alignItems={"center"} spacing={3}>
+                <HStack fontSize={30}  alignItems={"center"} spacing={3} userSelect={"none"}>
                     <Flex flexDirection={"row"} color={"white"} >
                         <Text>{data && !isLoading ? currTemp : null} </Text>
                         <Flex>

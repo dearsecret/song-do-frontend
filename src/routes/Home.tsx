@@ -50,9 +50,9 @@ export default function Home(){
                 </GridItem>
             </Grid>
             <Grid templateColumns={{base :"1fr" , md :"repeat(3,1fr)"}} px={{base:0 , xl: 30}} >
-                <GridItem fontSize={"sm"} as="b" bg={"#273745"} h={"100%"} py={5} px={10}>                    
-                    <Flex flexDirection={"column"} justifyContent={"start"} alignItems={"start"} h={"100%"} gap={10}>
-                        <Box w={"100%"}>                        
+                <GridItem fontSize={"sm"} as="b" bg={"#273745"} h={"100%"}  py={5} px={10} mb={3}>                    
+                    <Flex flexDirection={"column"} justifyContent={"start"} alignItems={"start"} h={"100%"} gap={8}>
+                        <Box  w={"100%"}>                        
                                 <Text fontStyle={"oblique"} fontSize={"lg"} color={"white"} userSelect={"none"}>Map</Text>
                                 <Flex flexDirection={"column"} justifyContent={"center"} pt={3} gap={3}>
                                     <Link to="/map">
@@ -104,8 +104,8 @@ export default function Home(){
                 )}
             
              <GridItem fontSize={"sm"} as="b" bg={"#8C8D8E"} h={"100%"} py={5} px={10}>                    
-                    <Flex flexDirection={"column"} justifyContent={"start"} alignItems={"start"} h={"100%"} gap={0}>
-                        <Box w={"100%"}>                        
+                    <Flex flexDirection={"column"} justifyContent={"start"} alignItems={"start"} h={"100%"} gap={8} mb={3}>
+                        <Box  w={"100%"}>                        
                                 <Text fontStyle={"oblique"} fontSize={"lg"} color={"white"} userSelect={"none"}>Information</Text>
                                 <Flex flexDirection={"column"} justifyContent={"center"} pt={3} gap={3}>
                                     <Link to="/deposit">

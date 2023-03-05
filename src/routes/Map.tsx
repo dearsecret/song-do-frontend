@@ -10,9 +10,9 @@ export default function Map(){
                 </Flex >
             </HStack>
             </Box>
-            <Flex justifyContent={"center"} m={7} mb={0} borderTopLeftRadius={{base: 65, sm:80, md:95}} overflow={"hidden"} h={"70%"} borderWidth={2} borderRightWidth={0} borderBottomWidth={0}>
+            <Flex justifyContent={"center"} m={7} mb={0} borderTopLeftRadius={{base: 65, sm:80, md:95}} overflow={"hidden"} h={"70%"} borderWidth={2} borderRightWidth={0} borderBottomWidth={0} >
 
-                <Grid w={"100vw"} h={"55vh"} templateColumns={"repeat(33,1fr)"} templateRows={"repeat(29,1fr)"}>
+                <Grid w={"100vw"}  sx={{"aspectRatio": "2/1"}} templateColumns={"repeat(33,1fr)"} templateRows={"repeat(29,1fr)"}>
                     <GridItem colSpan={9} rowSpan={11}>
                         <Button w={"100%"} h={"100%"} borderRadius={"none"} >
                             2호

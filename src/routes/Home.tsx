@@ -104,7 +104,7 @@ export default function Home(){
                 )}
             
              <GridItem fontSize={"sm"} as="b" bg={"#8C8D8E"} h={"100%"} py={5} px={10}>                    
-                    <Flex flexDirection={"column"} justifyContent={"start"} alignItems={"start"} h={"100%"} gap={10}>
+                    <Flex flexDirection={"column"} justifyContent={"start"} alignItems={"start"} h={"100%"} gap={0}>
                         <Box w={"100%"}>                        
                                 <Text fontStyle={"oblique"} fontSize={"lg"} color={"white"} userSelect={"none"}>Information</Text>
                                 <Flex flexDirection={"column"} justifyContent={"center"} pt={3} gap={3}>
@@ -133,7 +133,7 @@ export default function Home(){
                             <Text fontStyle={"oblique"} fontSize={"lg"} color={"white"} userSelect={"none"}>Location</Text>
                             <Flex flexDirection={"column"} justifyContent={"center"} pt={3} gap={3} >
                                 <Link to="https://www.google.com/maps?ll=37.418606,126.649889&z=13&t=m&hl=ko&gl=KR&mapclient=embed&cid=430906230749006181">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12675.13155301673!2d126.649889!3d37.4186063!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5fae2ef0f4c0965!2z7Iah64-E67mE7Leo7YOA7Jq0IOyCrOustOyLpA!5e0!3m2!1sko!2skr!4v1676710025590!5m2!1sko!2skr"  loading="lazy"></iframe>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12675.13155301673!2d126.649889!3d37.4186063!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5fae2ef0f4c0965!2z7Iah64-E67mE7Leo7YOA7Jq0IOyCrOustOyLpA!5e0!3m2!1sko!2skr!4v1676710025590!5m2!1sko!2skr"  loading="lazy" width={"100%"}></iframe>
                                 </Link>
                             </Flex>
                         </Box>

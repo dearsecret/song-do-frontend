@@ -1,4 +1,4 @@
-import { Grid, GridItem, Stack, keyframes, usePrefersReducedMotion, VStack, Text, Heading, HStack, Box, Image, Flex, Skeleton, SkeletonText, Button } from "@chakra-ui/react";
+import { Grid, GridItem, Stack, keyframes, usePrefersReducedMotion, VStack, Text, Heading, HStack, Box, Image, Flex, Skeleton, SkeletonText, Button, Divider } from "@chakra-ui/react";
 import { useQuery } from "@tanstack/react-query";
 import { Helmet } from "react-helmet";
 import Clock from "react-live-clock"
@@ -53,22 +53,22 @@ export default function Home(){
                 <GridItem fontSize={"sm"} as="b" bg={"#273745"} h={"100%"} py={5} px={10}>                    
                     <Flex flexDirection={"column"} justifyContent={"start"} alignItems={"start"} h={"100%"} gap={10}>
                         <Box w={"100%"}>                        
-                                <Text fontStyle={"oblique"} fontSize={"lg"} color={"white"}>Map</Text>
+                                <Text fontStyle={"oblique"} fontSize={"lg"} color={"white"} userSelect={"none"}>Map</Text>
                                 <Flex flexDirection={"column"} justifyContent={"center"} pt={3} gap={3}>
                                     <Link to="/map">
-                                        <Button w={"100%"} bg={"#192834"} color="white" >
+                                        <Button w={"100%"} bg={"#192834"} color="white"  boxShadow={"md"} borderRadius="sm">
                                             Usable Site
                                         </Button>
                                     </Link>
                                 </Flex>
                         </Box>
                         <Box w={"100%"}>                        
-                            <Text fontStyle={"oblique"} fontSize={"lg"} color={"white"}>Service</Text>
+                            <Text fontStyle={"oblique"} fontSize={"lg"} color={"white"} userSelect={"none"}>Service</Text>
                             <Flex flexDirection={"column"} justifyContent={"center"} pt={3} gap={3}>
-                                <Button w={"100%"} bg={"#192834"} color="white" disabled>
+                                <Button w={"100%"} bg={"#192834"} color="white" disabled boxShadow={"md"} borderRadius="sm">
                                     Meeting Lounge
                                 </Button>
-                                <Button w={"100%"} bg={"#192834"} color="white" disabled>
+                                <Button w={"100%"} bg={"#192834"} color="white" disabled boxShadow={"md"} borderRadius="sm">
                                     Register for Business
                                 </Button>
                             </Flex>
@@ -77,15 +77,6 @@ export default function Home(){
                 </GridItem>
                 {isLoading ? 
                     <>
-                    <GridItem p={5} bg={"#A49685"} >
-                            <Flex  borderRadius={"sm"} overflow={"hidden"} justifyContent={"center"}>
-                                <Skeleton w={"100%"} h={60} />
-                            </Flex>
-                            <Flex px={5} py={4} color={"whiteAlpha.800"} flexDirection={"column"}>
-                                <SkeletonText noOfLines={1} my={1} />
-                                <SkeletonText noOfLines={1} my={1} w={"30%"}  />
-                            </Flex>
-                    </GridItem>
                     <GridItem p={5} bg={"#A49685"} >
                             <Flex  borderRadius={"sm"} overflow={"hidden"} justifyContent={"center"}>
                                 <Skeleton w={"100%"} h={60} />
@@ -112,44 +103,43 @@ export default function Home(){
                     </GridItem>
                 )}
             
-                
-                <GridItem   bg="#8C8D8E" fontSize={"sm"} as="b" color={"gray.100"}>
-                    <VStack  p={0} m={0}>
-                        <HStack justifyContent={"space-between"} w={"80%"} pt={2} userSelect={"none"}>
-                            <Text fontStyle={"oblique"} fontSize={"lg"}>Information</Text>
-                        </HStack>
-                        <Stack pt={{base:0}} spacing={3} w={"80%"} textAlign={"center"} >
-                            <Link to="/deposit">
-                                <Box bg="#69696B" py={3} borderRadius={"sm"} mt={2} w="100%" boxShadow={"md"}>
-                                    <Text>
-                                        보증금 및 월납입금
-                                    </Text>
-                                </Box>
-                            </Link>
-                            <a href="mailto:dearsecret1217@gmail.com?subject='문자메시지를 남기시면'&body='조금 더 신속히 연락드릴 수 있습니다.'">
-                                <Box bg="#69696B" py={3} borderRadius={"sm"} w="100%" boxShadow={"md"}>
-                                    <Text>
-                                        Contact us with Email
-                                    </Text>
-                                </Box>
-                            </a>
-                            <a href="tel:+82 010-4476-8444">
-                                <Box bg="#69696B" pt={3} borderRadius={"sm"} w="100%" display={{base : "-moz-initial", sm : "none"}} boxShadow={"md"}>
-                                    <Text>
-                                        Contact us with CellPhone
-                                    </Text>
-                                </Box>
-                            </a>
-                        </Stack>
-                        <HStack justifyContent={"space-between"} w={"80%"} mt={4} userSelect={"none"}>
-                            <Text fontStyle={"oblique"} fontSize={"lg"} >Location</Text>
-                        </HStack>
-                        <Stack px={10} pb={8} opacity={"75%"} w={{base: "80%", md:"100%"}} >
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12675.13155301673!2d126.649889!3d37.4186063!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5fae2ef0f4c0965!2z7Iah64-E67mE7Leo7YOA7Jq0IOyCrOustOyLpA!5e0!3m2!1sko!2skr!4v1676710025590!5m2!1sko!2skr"  loading="lazy"></iframe>
-                        </Stack>
-                        
-                    </VStack>
+             <GridItem fontSize={"sm"} as="b" bg={"#8C8D8E"} h={"100%"} py={5} px={10}>                    
+                    <Flex flexDirection={"column"} justifyContent={"start"} alignItems={"start"} h={"100%"} gap={10}>
+                        <Box w={"100%"}>                        
+                                <Text fontStyle={"oblique"} fontSize={"lg"} color={"white"} userSelect={"none"}>Information</Text>
+                                <Flex flexDirection={"column"} justifyContent={"center"} pt={3} gap={3}>
+                                    <Link to="/deposit">
+                                        <Button w={"100%"} bg={"#69696B"} color="white" borderRadius={"none"} fontSize={"sm"} boxShadow={"md"}>
+                                            보증금 및 월 납입금
+                                        </Button>
+                                    </Link>
+                                </Flex>
+                                <Flex flexDirection={"column"} justifyContent={"center"} pt={3} gap={3}>
+                                    <a href="mailto:dearsecret1217@gmail.com?subject='문자메시지를 남기시면'&body='조금 더 신속히 연락드릴 수 있습니다.'">
+                                        <Button w={"100%"} bg={"#69696B"} color="white" borderRadius={"none"} fontSize={"sm"} boxShadow={"md"}>
+                                            Contact Us with Email
+                                        </Button>
+                                    </a>                                    
+                                </Flex>
+                                <Flex flexDirection={"column"} justifyContent={"center"} pt={3} gap={3}>
+                                    <a href="tel:+82 010-4476-8444">
+                                        <Button w={"100%"} bg={"#69696B"} color="white" borderRadius={"none"} fontSize={"sm"} boxShadow={"md"} display={{base : "-moz-initial", sm : "none"}}>
+                                            Contact Us with Phone
+                                        </Button>
+                                    </a>                                    
+                                </Flex>
+                        </Box>
+                        <Box w={"100%"}>                        
+                            <Text fontStyle={"oblique"} fontSize={"lg"} color={"white"} userSelect={"none"}>Location</Text>
+                            <Flex flexDirection={"column"} justifyContent={"center"} pt={3} gap={3} >
+                                <Link to="https://www.google.com/maps?ll=37.418606,126.649889&z=13&t=m&hl=ko&gl=KR&mapclient=embed&cid=430906230749006181">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12675.13155301673!2d126.649889!3d37.4186063!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5fae2ef0f4c0965!2z7Iah64-E67mE7Leo7YOA7Jq0IOyCrOustOyLpA!5e0!3m2!1sko!2skr!4v1676710025590!5m2!1sko!2skr"  loading="lazy"></iframe>
+                                </Link>
+                            </Flex>
+                        </Box>
+                    </Flex>
                 </GridItem>
+                
             </Grid>
         </Stack>
     )

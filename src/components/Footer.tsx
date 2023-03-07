@@ -22,7 +22,7 @@ export default function (){
                     </HStack>
                     <HStack justifyContent={"space-between"}>
                         <Text>대표번호</Text>
-                        <Text>010-4476-8444</Text>
+                        <Text>02-424-0187</Text>
                     </HStack>
                     <HStack justifyContent={"space-between"}>
                         <Text>대표</Text>

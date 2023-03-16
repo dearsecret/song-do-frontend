@@ -21,10 +21,16 @@ export default function Header(){
         <>
         <HStack justifyContent={"flex-end"} px={"5"} h={5}  m={0}>
         {!userLoading? 
-            (isLoggedIn? 
+            (isLoggedIn?
+            <HStack>
+            <Link to="accounting">
+                <Button color={"gray.600"} variant={"solid"} size={"sm"} sx={{'@media print' : {display : "none"}}}>정보공개</Button>
+            </Link>
             <Link to="/invoices">
                 <Button  bg={"#A29A91"} color={"white"} variant={"solid"} size={"sm"} sx={{'@media print' : {display : "none"}}}>이용내역</Button>
             </Link>
+            </HStack>
+
             :null)
         :null}
         </HStack>

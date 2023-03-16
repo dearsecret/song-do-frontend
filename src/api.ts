@@ -70,3 +70,5 @@ export const getPromotionDetail = ({queryKey}:QueryFunctionContext) => {
 }
 
 export const getWeathers = () => instance.get(`informations/weather`).then(res=>res.data)
+
+export const getAccounting = () => instance.get(`informations/accounting`).then(res=>res.data)

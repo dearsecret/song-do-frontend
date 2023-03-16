@@ -10,6 +10,7 @@ import HostInvoices from "./routes/HostInvoices";
 import Deposit from "./components/Deposit";
 import Promotion from "./routes/PromotionDetail";
 import Map from "./routes/Map";
+import Accounting from "./routes/Accounting";
 
 
 const router = createBrowserRouter([
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
         {
           path : "map",
           element : <Map />
+        },
+        {
+          path : "accounting",
+          element : <Accounting />
         },
       ]
     },

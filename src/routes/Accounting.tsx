@@ -16,9 +16,9 @@ export default function Accounting(){
     const {data, isLoading} = useQuery<accounting[]>([`accounting`], getAccounting)
     return (
         <ProtectedPage>
-            <VStack m={0} p={"3%"} alignItems={"start"} spacing={10} userSelect={"none"}>
+            <VStack m={0} p={"3%"} alignItems={"start"} spacing={10} userSelect={"none"} fontSize={"md"} noOfLines={1}>
             <Heading fontSize={"xl"}>송도비취타운 4층</Heading>
-            <Grid templateColumns={"2fr 1fr 3fr"} borderWidth={1} alignItems={"center"} textAlign={"end"}  w={"80%"}>
+            <Grid templateColumns={"2fr 1fr 3fr"} borderWidth={1} alignItems={"center"} textAlign={"end"}  w={"95%"} >
                 <Text>
                     건물정보
                 </Text>
@@ -74,13 +74,20 @@ export default function Accounting(){
                 <Text mr={3}>
                     16.41%
                 </Text>
+                <GridItem colSpan={3}>
+                    <Center>
+                        <Divider />
+                    </Center>
+                </GridItem>
+            <GridItem colSpan={3}>
+                <VStack spacing={0} textAlign={"start"} alignItems={"start"} m={5}>
+                    <Text noOfLines={1} fontSize={"sm"}>- 본 건물의 KT 임차 수익 약 200만원으로 관리비를 충당합니다.</Text>
+                    <Text noOfLines={1} fontSize={"sm"}>- 투명하고 공정한 관리를 위하여, 최대 10건의 임대인의 추가납부내역을 공개하고 있습니다.</Text>
+                    <Text noOfLines={1} fontSize={"sm"}>- 임대인은 임차인 보호를 위하여 견적서 및 영수증에 대한 정보공개를 요청하며,</Text>
+                    <Text noOfLines={1} fontSize={"sm"}>- 견적서 및 영수증 발급 시 전용률 16.41%에 의거하여 성실히 지급합니다.</Text>
+                </VStack>
+            </GridItem>
             </Grid>
-            <VStack spacing={0} textAlign={"start"} alignItems={"start"}>
-                <Text noOfLines={1} fontSize={"sm"}>-본 건물의 KT 임차 수익 약 200만원으로 관리비를 충당합니다.</Text>
-                <Text noOfLines={1} fontSize={"sm"}>-투명하고 공정한 관리를 위하여, 최대 10건의 임대인의 추가납부내역을 공개하고 있습니다.</Text>
-                <Text noOfLines={1} fontSize={"sm"}>-임대인은 임차인 보호를 위하여 견적서 및 영수증에 대한 정보공개를 요청하며,</Text>
-                <Text noOfLines={1} fontSize={"sm"}>-발급 시 전용률 16.41%에 의거하여 성실히 지급합니다.</Text>
-            </VStack>
             {
                 !isLoading? 
                 

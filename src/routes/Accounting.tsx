@@ -81,10 +81,10 @@ export default function Accounting(){
                 </GridItem>
             <GridItem colSpan={3}>
                 <VStack spacing={0} textAlign={"start"} alignItems={"start"} m={5}>
-                    <Text noOfLines={1} fontSize={"sm"}>- 본 건물의 KT 임차 수익 약 200만원으로 관리비를 충당합니다.</Text>
+                    <Text noOfLines={1} fontSize={"sm"}>- 본 건물의 KT 기지국 임차 수익으로 관리비를 충당합니다.</Text>
                     <Text noOfLines={1} fontSize={"sm"}>- 투명하고 공정한 관리를 위하여, 최대 10건의 임대인의 추가납부내역을 공개하고 있습니다.</Text>
-                    <Text noOfLines={1} fontSize={"sm"}>- 임대인은 임차인 보호를 위하여 견적서 및 영수증에 대한 정보공개를 요청하며,</Text>
-                    <Text noOfLines={1} fontSize={"sm"}>- 견적서 및 영수증 발급 시 전용률 16.41%에 의거하여 성실히 지급합니다.</Text>
+                    <Text noOfLines={1} fontSize={"sm"}>- 임대인은 임차인 보호를 위해 본 건물의 견적서, 수리내역서 및 영수증을 요구하며,</Text>
+                    <Text noOfLines={1} fontSize={"sm"}>- 견적서, 수리내역서 및 영수증 발급 시 전용률 16.41%에 의거하여 성실히 지급합니다.</Text>
                 </VStack>
             </GridItem>
             </Grid>
@@ -93,7 +93,7 @@ export default function Accounting(){
                 
                 
                 data?.map((accounting ,ind) => 
-                    <Grid templateColumns={"repeat(4,1fr)"} w={"100%"} fontSize="md" textAlign={"center"} >
+                    <Grid templateColumns={"repeat(4,1fr)"} w={"100%"} fontSize="md" textAlign={"center"} justifyContent={"center"}>
                         {
                             ind ===0 ?
                             [0].map(inde => 

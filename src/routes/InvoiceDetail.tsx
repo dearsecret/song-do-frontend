@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Heading, HStack, Skeleton, Stack, Text, VStack } from "@chakra-ui/react"
+import { Box, Button, Container, Grid, Heading, HStack, Skeleton, Stack, Text, VStack } from "@chakra-ui/react"
 import { useQuery } from "@tanstack/react-query"
 import { Helmet } from "react-helmet"
 import { FaCheckCircle } from "react-icons/fa"
@@ -17,6 +17,7 @@ export default function InvoiceDetail (){
             navigate("/invoices")
         }
     })
+    const print =() => window.print()
     return (
         <ProtectedPage>
             
@@ -26,7 +27,10 @@ export default function InvoiceDetail (){
         <Helmet><title>{data?.contract.name}</title></Helmet>
         <Stack w={"100%"} px={{base : 0, md:10}} py={{base:0, md:5}} spacing={5} alignItems="flex-start" direction={{base: "column" , lg:"row" }}>
         <VStack w={"100%"} justifyContent="center" alignItems={"space-between"} px={{base :2, sm:10, md:20}} py={5} spacing={5}  borderRadius="lg" bg={"#F8F6EF"}>
-            <Heading fontSize={24}>이용내역</Heading>
+            <HStack justifyContent={"space-between"}>
+                <Heading fontSize={24}>이용내역</Heading>
+                <Button onClick={print} sx={{'@media print' : {display : "none"}}}>프린트</Button>
+            </HStack>
             <Heading fontSize={17}>사용자 정보</Heading>
             <Grid templateColumns={"1fr 1fr"} margin={{base:5 , md:10}} borderWidth={1} borderRadius={"lg"} padding={5} bg="white">
                 <Text>호실</Text>

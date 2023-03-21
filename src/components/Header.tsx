@@ -57,11 +57,13 @@ export default function Header(){
                         </MenuButton>
                     
                         <MenuList>
-                            {
-                                user.is_host ?
+                            {   
+                                user.is_staff ?
+                                
                                 <Link to="/host">
                                     <MenuItem>요금 조회</MenuItem>
-                                </Link> : null
+                                </Link>
+                                 : null
                             }
                             <Link to="/profile">
                                 <MenuItem>나의 정보</MenuItem>

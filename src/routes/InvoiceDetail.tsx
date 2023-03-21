@@ -29,7 +29,7 @@ export default function InvoiceDetail (){
         <VStack w={"100%"} justifyContent="center" alignItems={"space-between"} px={{base :2, sm:10, md:20}} py={5} spacing={5}  borderRadius="lg" bg={"#F8F6EF"}>
             <HStack justifyContent={"space-between"}>
                 <Heading fontSize={24}>이용내역</Heading>
-                <Button onClick={print} sx={{'@media print' : {display : "none"}}}>프린트</Button>
+                <Button onClick={print} sx={{'@media print' : {display : "none"}}} display={{"base" : "none", md: "initial"}}>프린트</Button>
             </HStack>
             <Heading fontSize={17}>사용자 정보</Heading>
             <Grid templateColumns={"1fr 1fr"} margin={{base:5 , md:10}} borderWidth={1} borderRadius={"lg"} padding={5} bg="white">
